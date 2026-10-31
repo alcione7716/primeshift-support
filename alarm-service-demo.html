@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PrimeShift — Android alarm service demonstration</title>
+<style>body{font:17px/1.6 system-ui,sans-serif;color:#17304f;background:#f1f7fd;max-width:850px;margin:32px auto;padding:0 20px}h1{line-height:1.2}video{display:block;background:#142943;width:min(100%,400px);max-height:75vh;border-radius:16px;margin:24px auto}a{color:#125d9b}.note{font-size:15px;color:#4a6078}</style>
+<h1>PrimeShift Android alarm service</h1>
+<p>Continuous recording of PrimeShift 1.0.0 (24), package <code>app.moashift.mobile</code>, on an Android 16 emulator. Notification and exact-alarm permissions were granted before recording.</p>
+<video controls playsinline preload="metadata" src="alarm-service-demo.mp4"></video>
+<p><a href="alarm-service-demo.mp4">Open or download the MP4 recording</a></p>
+<ol>
+<li>In Settings → Work alarm, the user taps “Test alarm in 10 seconds”. The app confirms the scheduled test.</li>
+<li>The user returns to the Android home screen before the scheduled alarm starts.</li>
+<li>The notification shade shows the ongoing “PrimeShift alarm test” notification and its Stop action while PrimeShift is in the background.</li>
+<li>The user taps Stop. The alarm notification disappears and the foreground service ends.</li>
+</ol>
+<p class="note">This screen recording has no audio track; it demonstrates the visible scheduling, background service and Stop flow. It does not establish speaker loudness, real-device overnight reliability, or Google Play purchase behavior. Only synthetic test data is shown.</p>
+<p>The mediaPlayback foreground service runs only while a user-scheduled alarm plays. Playback also stops automatically after approximately 60 seconds. A boot receiver reschedules alarms and does not begin audio playback on boot.</p>
+<p><a href="./">PrimeShift support</a> · DG Intelligence · <a href="mailto:dgintelligence.support@gmail.com">dgintelligence.support@gmail.com</a></p>
+</html>
